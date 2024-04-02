@@ -44,28 +44,6 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "a2f93c7b-c619-4ed8-a705-4583c5cf13a4",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Mouvement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "107fa839-745a-4c52-a983-9ac74f8211ea",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Mouvement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "2D Vector",
                     "id": "a8ae99f1-fcbc-484a-b0bb-c31a487e76fe",
                     "path": "2DVector",
@@ -94,6 +72,39 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "GamePad",
+                    "action": "Mouvement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "2af5722e-4267-4cd6-ae75-18364f4fe6c5",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mouvement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "66bfdaa3-6b56-4c63-90ed-aad05b191a23",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Mouvement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "234ec5c6-2a6a-4963-8aae-bdb0be560c5d",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
                     "action": "Mouvement",
                     "isComposite": false,
                     "isPartOfComposite": true

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5540266176176483675}
   - component: {fileID: 5575626235607754843}
   - component: {fileID: 942324928445178851}
+  - component: {fileID: 5904170782612231589}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -159,7 +160,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &5575626235607754843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +203,19 @@ MonoBehaviour:
     m_ActionId: 9a7a5b3c-ade9-4d18-b107-33e69e111325
     m_ActionName: GamePad/Mouvement[/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5904170782612231589}
+        m_TargetAssemblyTypeName: Jump, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 12212ba1-2553-4473-bb5e-01effd1a4c43
     m_ActionName: GamePad/Jump[/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
@@ -235,4 +248,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+  _rigidbody2D: {fileID: 5540266176176483675}
+--- !u!114 &5904170782612231589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4562600986279343449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519b1c06893edfa43b9de221ef350a3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _height: 10
   _rigidbody2D: {fileID: 5540266176176483675}
