@@ -14,6 +14,7 @@ public class Transformation : MonoBehaviour
     private void Start()
     {
         _transformManager = FindObjectOfType<TransformManager>();
+        _jump.Time = 2;
     }
 
     public void OnTransform(InputAction.CallbackContext context)
@@ -26,9 +27,12 @@ public class Transformation : MonoBehaviour
 
     private void FixedUpdate()
     {
+        _jump.Time += Time.deltaTime;
+
         if (_transformManager._wichTransform == 0)
         {
             _jump.Height = 7.5f;
+            _jump.MaxTime = 1.7f;
             _movement.Speed = 5;
 
             if (_transformManager._canAppear == true)
@@ -42,6 +46,7 @@ public class Transformation : MonoBehaviour
         {
             _attack.ReloadReady = false;
             _jump.Height = 5f;
+            _jump.MaxTime = 1;
             _movement.Speed = 10;
 
             if (_transformManager._canAppear == false)
