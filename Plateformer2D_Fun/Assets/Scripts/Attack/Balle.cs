@@ -18,7 +18,7 @@ public class Balle : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag != "Enemy" && other.tag != "Bullet")
+        if (other.tag != "Enemy" && other.tag != "Bullet" && other.tag != "Player")
         {
             Destroy(gameObject);
         }

@@ -6,7 +6,7 @@ public class HPEnemy : MonoBehaviour
 
     [SerializeField] private Balle _bulletPrefab;
 
-    public float _hp = 3;
+    private float _hp = 3;
 
     void Update()
     {
