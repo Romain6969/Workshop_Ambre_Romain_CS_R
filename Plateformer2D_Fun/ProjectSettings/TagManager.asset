@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Ennemie
-  - Balle
+  - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX

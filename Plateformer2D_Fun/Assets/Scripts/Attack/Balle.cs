@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Balle : MonoBehaviour
 {
+    [field: SerializeField] public float Dammage { get; set; }
     [SerializeField] private Rigidbody2D _rigidBalle;
     [SerializeField] private float _force;
     [SerializeField] private GameObject _aim;
@@ -17,9 +18,13 @@ public class Balle : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag != "Ennemie" && other.tag != "Balle")
+        if (other.tag != "Enemy" && other.tag != "Bullet")
         {
             Destroy(gameObject);
+        }
+        else
+        {
+            _rigidBalle.AddForce(Vector2.up * (_force * 1.25f));
         }
     }
 }
