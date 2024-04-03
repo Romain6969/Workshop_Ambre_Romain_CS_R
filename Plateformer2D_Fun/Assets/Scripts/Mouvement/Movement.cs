@@ -3,8 +3,8 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private int _speed;
-    [SerializeField] private Rigidbody2D _rigidbody2D;
+    [field: SerializeField] public int Speed { get; set; }
+    [field: SerializeField] public Rigidbody2D Rigidbody2D { get; set; }
     private Vector2 _value;
 
     public void OnMouvement(InputAction.CallbackContext context)
@@ -16,6 +16,6 @@ public class Movement : MonoBehaviour
     {
         Vector3 mouvement = new Vector3(_value.x, _value.y, 0);
         mouvement.Normalize();
-        transform.Translate(_speed * mouvement * Time.deltaTime);
+        transform.Translate(Speed * mouvement * Time.deltaTime);
     }
 }

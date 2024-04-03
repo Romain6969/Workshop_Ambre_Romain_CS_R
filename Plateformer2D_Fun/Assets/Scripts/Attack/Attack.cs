@@ -6,27 +6,27 @@ public class Attack : MonoBehaviour
     [SerializeField] private GameObject _balle;
     [SerializeField] private GameObject _spawnBalle;
     private float _reload;
-    private bool _reloadReady = true;
+    [field: SerializeField] public bool ReloadReady { get; set; }
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.performed && _reloadReady == true)
+        if (context.performed && ReloadReady == true)
         {
             Instantiate(_balle, _spawnBalle.transform.position, transform.rotation);
-            _reloadReady = false;
+            ReloadReady = false;
         }
     }
 
     private void FixedUpdate()
     {
-        if (_reloadReady == false)
+        if (ReloadReady == false)
         {
             _reload += Time.deltaTime;
             
             if (_reload >= 0.5f)
             {
                 _reload = 0;
-                _reloadReady = true;
+                ReloadReady = true;
             }
         }
     }
