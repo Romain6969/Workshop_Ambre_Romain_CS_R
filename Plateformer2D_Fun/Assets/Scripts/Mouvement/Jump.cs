@@ -3,8 +3,8 @@ using UnityEngine.InputSystem;
 
 public class Jump : MonoBehaviour
 {
-    [SerializeField] private float _height;
-    [SerializeField] private Rigidbody2D _rigidbody2D;
+    [field: SerializeField] public float Height { get; set; }
+    [field: SerializeField] public Rigidbody2D Rigidbody2D { get; set; }
     private bool _verifGround = false;
 
     public void OnJump(InputAction.CallbackContext context)
@@ -13,22 +13,22 @@ public class Jump : MonoBehaviour
         {
             if (context.performed)
             {
-                _rigidbody2D.AddForce(Vector2.up * _height, ForceMode2D.Impulse);
+                Rigidbody2D.AddForce(Vector2.up * Height, ForceMode2D.Impulse);
                 _verifGround = false;
             }
         }
-        
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.tag == "Ground")
         {
             _verifGround = true;
         }
-        //else
-        //{
-        //    _verifGround = false;
-        //}
+    }
+
+    private void FixedUpdate()
+    {
+        Debug.Log(_verifGround);
     }
 }

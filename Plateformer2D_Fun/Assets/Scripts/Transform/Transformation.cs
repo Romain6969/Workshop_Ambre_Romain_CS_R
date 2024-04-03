@@ -5,13 +5,17 @@ public class Transformation : MonoBehaviour
 {
     [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _transform;
-    private bool _canTransform = true;
     [SerializeField] private TransformManager _transformManager;
+    [SerializeField] private Attack _attack;
+    [SerializeField] private Jump _jump;
+    [SerializeField] private Movement _movement;
+    private bool _canTransform = true;
 
     private void Start()
     {
         _transformManager = FindObjectOfType<TransformManager>();
     }
+
     public void OnTransform(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -22,26 +26,29 @@ public class Transformation : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(_transformManager._wichTransform);
-        Debug.Log(_transformManager._canAppear);
         if (_transformManager._wichTransform == 0)
         {
+            _jump.Height = 7.5f;
+            _movement.Speed = 5;
+
             if (_transformManager._canAppear == true)
             {
                 _transformManager._canAppear = false;
-                Destroy(GameObject.Find("PlayerTransformation(Clone)"));
-                Destroy(GameObject.Find("PlayerTransformation(Clone)(Clone)"));
-                Instantiate(_player);
+                _transform.SetActive(false);
+                _player.SetActive(true);
             }
         }
         else if (_transformManager._wichTransform == 1)
         {
+            _attack.ReloadReady = false;
+            _jump.Height = 5f;
+            _movement.Speed = 10;
+
             if (_transformManager._canAppear == false)
             {
                 _transformManager._canAppear = true;
-                Destroy(GameObject.Find("Player"));
-                Destroy(GameObject.Find("Player(Clone)"));
-                Instantiate(_transform);
+                _player.SetActive(false);
+                _transform.SetActive(true);
             }
         }
         else if (_transformManager._wichTransform >= 2)
