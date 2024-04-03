@@ -26,9 +26,9 @@ public class Jump : MonoBehaviour
         {
             _verifGround = true;
         }
-        else
-        {
-            _verifGround = false;
-        }
+        //else
+        //{
+        //    _verifGround = false;
+        //}
     }
 }
