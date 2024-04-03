@@ -5,30 +5,18 @@ public class Jump : MonoBehaviour
 {
     [field: SerializeField] public float Height { get; set; }
     [field: SerializeField] public Rigidbody2D Rigidbody2D { get; set; }
-    private bool _verifGround = false;
+    [field: SerializeField] public float Time { get; set; }
+    [field: SerializeField] public float MaxTime { get; set; }
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (_verifGround == true)
+        if (Time >= MaxTime)
         {
             if (context.performed)
             {
                 Rigidbody2D.AddForce(Vector2.up * Height, ForceMode2D.Impulse);
-                _verifGround = false;
+                Time = 0;
             }
         }
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Ground")
-        {
-            _verifGround = true;
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        Debug.Log(_verifGround);
     }
 }
