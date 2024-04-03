@@ -164,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Dammage>k__BackingField: 1
   _rigidBalle: {fileID: 3942588375259285945}
-  _force: 500
+  _force: 400
   _aim: {fileID: 0}
 --- !u!96 &5538207998797138565
 TrailRenderer:

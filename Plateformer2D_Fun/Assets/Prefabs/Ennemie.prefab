@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adfeddbeae2dc114199e95133b863f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _walk: 0
+  _walk: 2
   _speed: 2
 --- !u!114 &1227241306873256240
 MonoBehaviour:
