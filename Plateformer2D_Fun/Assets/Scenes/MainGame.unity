@@ -23612,6 +23612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215a637414fb11041b12c71f96bcf6cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _transformPrefab: {fileID: 3813178397917130154, guid: a33bafe50db857644a2d5ccb9af56588, type: 3}
   _player: {fileID: 444243776}
   _transform: {fileID: 725682939}
   _transformManager: {fileID: 783132817}
