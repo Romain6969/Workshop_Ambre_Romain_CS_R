@@ -9,7 +9,6 @@ public class Transformation : MonoBehaviour
     [SerializeField] private Attack _attack;
     [SerializeField] private Jump _jump;
     [SerializeField] private Movement _movement;
-    private bool _canTransform = true;
 
     private void Start()
     {
@@ -32,7 +31,7 @@ public class Transformation : MonoBehaviour
         if (_transformManager._wichTransform == 0)
         {
             _jump.Height = 7.5f;
-            _jump.MaxTime = 1.7f;
+            _jump.MaxTime = 1.6f;
             _movement.Speed = 5;
 
             if (_transformManager._canAppear == true)
@@ -46,7 +45,7 @@ public class Transformation : MonoBehaviour
         {
             _attack.ReloadReady = false;
             _jump.Height = 5f;
-            _jump.MaxTime = 1;
+            _jump.MaxTime = 0.9f;
             _movement.Speed = 10;
 
             if (_transformManager._canAppear == false)
