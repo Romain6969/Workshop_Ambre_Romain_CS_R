@@ -75,7 +75,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":0.7263911962509155,"g":0.7263911962509155,"b":0.7263911962509155,"a":1.0}'
+      m_SerializableObject: '{"r":0.5377358198165894,"g":0.5377358198165894,"b":0.5377358198165894,"a":1.0}'
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -2959,7 +2959,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":0.7263911962509155,"g":0.7263911962509155,"b":0.7263911962509155,"a":1.0}'
+      m_SerializableObject: '{"r":0.5377358198165894,"g":0.5377358198165894,"b":0.5377358198165894,"a":1.0}'
     m_Space: 2147483647
   m_Property:
     name: o

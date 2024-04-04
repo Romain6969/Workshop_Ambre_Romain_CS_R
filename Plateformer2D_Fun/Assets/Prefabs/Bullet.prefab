@@ -284,7 +284,7 @@ MonoBehaviour:
   _rigidBalle: {fileID: 3942588375259285945}
   _force: 400
   _aim: {fileID: 0}
-  _vFXgraph: {fileID: 3019649396337576285}
+  _impactPrefab: {fileID: 1446572324580576277, guid: a87321c36c5c99d469fc3c2d3aef41ff, type: 3}
 --- !u!96 &5538207998797138565
 TrailRenderer:
   serializedVersion: 3

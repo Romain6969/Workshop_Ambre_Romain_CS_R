@@ -8,6 +8,7 @@ public class End : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            Time.timeScale = 0;
             _panel.SetActive(true);
         }
     }

@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Dammage>k__BackingField: 1
   _bulletPrefab: {fileID: 6611074632356996946, guid: 108e49b583a63aa4d9194c8dbb5323ac, type: 3}
+  _explosionPrefab: {fileID: 938389269981681509, guid: c25d5beb15c362f47baad1177a0b9709, type: 3}
 --- !u!58 &-1700673285632006801
 CircleCollider2D:
   m_ObjectHideFlags: 0

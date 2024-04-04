@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Transformation : MonoBehaviour
 {
+    [SerializeField] private GameObject _transformPrefab;
     [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _transform;
     [SerializeField] private TransformManager _transformManager;
@@ -19,6 +20,7 @@ public class Transformation : MonoBehaviour
         if (context.performed)
         {
             _transformManager._wichTransform += 1;
+            Instantiate(_transformPrefab, transform.position, transform.rotation);
         }
     }
 

@@ -5,6 +5,7 @@ public class HPEnemy : MonoBehaviour
     [field: SerializeField] public float Dammage { get; private set; }
 
     [SerializeField] private Balle _bulletPrefab;
+    [SerializeField] private GameObject _explosionPrefab;
 
     private float _hp = 3;
 
@@ -12,6 +13,7 @@ public class HPEnemy : MonoBehaviour
     {
         if (_hp <= 0)
         {
+            Instantiate(_explosionPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
