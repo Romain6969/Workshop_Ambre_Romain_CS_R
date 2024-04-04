@@ -5,18 +5,22 @@ public class Jump : MonoBehaviour
 {
     [field: SerializeField] public float Height { get; set; }
     [field: SerializeField] public Rigidbody2D Rigidbody2D { get; set; }
-    [field: SerializeField] public float Time { get; set; }
-    [field: SerializeField] public float MaxTime { get; set; }
+    private bool _isGonnaJump = false;
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (Time >= MaxTime)
+        if (context.performed)
         {
-            if (context.performed)
-            {
-                Rigidbody2D.AddForce(Vector2.up * Height, ForceMode2D.Impulse);
-                Time = 0;
-            }
+            _isGonnaJump = true;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground" && _isGonnaJump == true)
+        {
+            Rigidbody2D.AddForce(Vector2.up * Height, ForceMode2D.Impulse);
+            _isGonnaJump = false;
         }
     }
 }

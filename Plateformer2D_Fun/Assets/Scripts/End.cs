@@ -6,6 +6,9 @@ public class End : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _panel.SetActive(true);
+        if (collision.tag == "Player")
+        {
+            _panel.SetActive(true);
+        }
     }
 }

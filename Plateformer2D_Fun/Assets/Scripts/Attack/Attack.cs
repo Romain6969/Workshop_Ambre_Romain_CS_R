@@ -5,6 +5,7 @@ public class Attack : MonoBehaviour
 {
     [SerializeField] private GameObject _balle;
     [SerializeField] private GameObject _spawnBalle;
+    [SerializeField] private TransformManager _transformManager;
     private float _reload;
     [field: SerializeField] public bool ReloadReady { get; set; }
 
@@ -19,7 +20,7 @@ public class Attack : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (ReloadReady == false)
+        if (ReloadReady == false && _transformManager._wichTransform == 0)
         {
             _reload += Time.deltaTime;
             
