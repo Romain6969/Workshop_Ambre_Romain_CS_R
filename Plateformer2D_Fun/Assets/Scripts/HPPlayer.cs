@@ -37,7 +37,7 @@ public class HPPlayer : MonoBehaviour
 
                 // Calculate Angle Between the collision point and the player
                 ContactPoint2D contactPoint = collision.GetContact(0);
-                Vector2 playerPosition = new Vector2(transform.position.x, 1f);
+                Vector2 playerPosition = new Vector2(transform.position.x, 2f);
                 Vector2 dir = contactPoint.point - playerPosition;
 
                 // We then get the opposite (-Vector3) and normalize it

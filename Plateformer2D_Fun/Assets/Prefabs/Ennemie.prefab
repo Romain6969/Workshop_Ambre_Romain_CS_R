@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4798400978006514360}
   - component: {fileID: 1659019370955190566}
   - component: {fileID: 1227241306873256240}
-  - component: {fileID: -1700673285632006801}
+  - component: {fileID: 153143119677301492}
   m_Layer: 0
   m_Name: Ennemie
   m_TagString: Enemy
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f16e0b6c839b86d4fa3d9d044e5028c9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _walk: 2
-  _speed: 2
+  _speed: 1
 --- !u!114 &1227241306873256240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,8 +144,8 @@ MonoBehaviour:
   <Dammage>k__BackingField: 1
   _bulletPrefab: {fileID: 6611074632356996946, guid: 108e49b583a63aa4d9194c8dbb5323ac, type: 3}
   _explosionPrefab: {fileID: 938389269981681509, guid: c25d5beb15c362f47baad1177a0b9709, type: 3}
---- !u!58 &-1700673285632006801
-CircleCollider2D:
+--- !u!61 &153143119677301492
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -176,6 +176,16 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.049153328, y: -0.15221441}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 1.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1.0084705, y: 1.1955712}
+  m_EdgeRadius: 0

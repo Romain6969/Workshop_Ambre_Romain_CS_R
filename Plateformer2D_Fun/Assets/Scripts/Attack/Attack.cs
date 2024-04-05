@@ -11,7 +11,7 @@ public class Attack : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.performed && ReloadReady == true)
+        if (context.performed && ReloadReady == true && _transformManager._wichTransform == 0)
         {
             Instantiate(_balle, _spawnBalle.transform.position, transform.rotation);
             ReloadReady = false;
