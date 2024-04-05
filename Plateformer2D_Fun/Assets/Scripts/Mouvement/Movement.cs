@@ -8,10 +8,18 @@ public class Movement : MonoBehaviour
     private bool _isFacingRight = true;
     private Vector2 _value;
     [field: SerializeField] public bool PlayerController { get; set; }
+    [SerializeField] private Animator _animatorShooter;
+    [SerializeField] private Animator _animatorSmall;
+    [SerializeField] private SpriteRenderer _spriteRendererShooter;
+    [SerializeField] private Sprite _spriteShooter;
+    [SerializeField] private SpriteRenderer _spriteRendererSmall;
+    [SerializeField] private Sprite _spriteSmall;
 
     private void Start()
     {
         PlayerController = true;
+        _animatorShooter.enabled = false;
+        _animatorSmall.enabled = false;
     }
 
     public void OnMouvement(InputAction.CallbackContext context)
@@ -35,15 +43,33 @@ public class Movement : MonoBehaviour
             mouvement.Normalize();
             transform.Translate(Speed * mouvement * Time.deltaTime);
 
-            if (!_isFacingRight && _value.x > 0)
+            if (_value.x > 0)
             {
-                Flip();
+                _animatorShooter.enabled = true;
+                _animatorSmall.enabled = true;
+
+                if (!_isFacingRight)
+                {
+                    Flip();
+                }
             }
-            else if (_isFacingRight && _value.x < 0)
+            else if (_value.x < 0)
             {
-                Flip();
+                _animatorShooter.enabled = true;
+                _animatorSmall.enabled = true;
+
+                if (_isFacingRight)
+                {
+                    Flip();
+                }
+            }
+            else
+            {
+                _spriteRendererShooter.sprite = _spriteShooter;
+                _spriteRendererSmall.sprite = _spriteSmall;
+                _animatorShooter.enabled = false;
+                _animatorSmall.enabled = false;
             }
         }
-        
     }
 }

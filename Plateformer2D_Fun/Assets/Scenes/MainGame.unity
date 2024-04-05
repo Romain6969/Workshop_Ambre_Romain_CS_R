@@ -19870,6 +19870,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3721570291781680148, guid: a35f7ab9bde78f84788a778b8d4f7792, type: 3}
   m_PrefabInstance: {fileID: 2057284091}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &444243782 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4846565396037696640, guid: a35f7ab9bde78f84788a778b8d4f7792, type: 3}
+  m_PrefabInstance: {fileID: 2057284091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &444243783 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2201575782824704955, guid: a35f7ab9bde78f84788a778b8d4f7792, type: 3}
+  m_PrefabInstance: {fileID: 2057284091}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &449180066
 GameObject:
   m_ObjectHideFlags: 0
@@ -77550,6 +77560,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3721570291781680148, guid: 94ca3e506d45cd24f984736bce357199, type: 3}
   m_PrefabInstance: {fileID: 2108697651}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &725682945 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4846565396037696640, guid: 94ca3e506d45cd24f984736bce357199, type: 3}
+  m_PrefabInstance: {fileID: 2108697651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &725682946 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1740002558879387302, guid: 94ca3e506d45cd24f984736bce357199, type: 3}
+  m_PrefabInstance: {fileID: 2108697651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &733182325
 GameObject:
   m_ObjectHideFlags: 0
@@ -81423,6 +81443,12 @@ MonoBehaviour:
   <Speed>k__BackingField: 0
   <Rigidbody2D>k__BackingField: {fileID: 1253054322}
   <PlayerController>k__BackingField: 0
+  _animatorShooter: {fileID: 444243783}
+  _animatorSmall: {fileID: 725682946}
+  _spriteRendererShooter: {fileID: 444243782}
+  _spriteShooter: {fileID: 21300000, guid: 53253dbfe5d38894f9197ce1d1913c23, type: 3}
+  _spriteRendererSmall: {fileID: 725682945}
+  _spriteSmall: {fileID: 21300000, guid: d4ce59f6b26d56547abd8817b8a9c65a, type: 3}
 --- !u!114 &1253054321
 MonoBehaviour:
   m_ObjectHideFlags: 0
