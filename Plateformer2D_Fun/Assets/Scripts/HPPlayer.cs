@@ -6,9 +6,12 @@ public class HPPlayer : MonoBehaviour
 {
     [SerializeField] private HPEnemy _enemyPrefab;
     [SerializeField] private GameObject _gameOverPanel;
+    [SerializeField] private GameObject _ooofPrefab;
     [SerializeField] private TMP_Text _text;
     [SerializeField] private float _force;
     [SerializeField] private Movement _movement;
+    [SerializeField] private AudioSource _audiosource;
+    [SerializeField] private AudioClip _ouch;
     private float _invulnerability = 0.5f;
     private float _hp = 5;
 
@@ -20,6 +23,7 @@ public class HPPlayer : MonoBehaviour
 
         if (_hp <= 0)
         {
+            Instantiate(_ooofPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
             _gameOverPanel.SetActive(true);
         }
@@ -31,6 +35,7 @@ public class HPPlayer : MonoBehaviour
         {
             if (collision.gameObject.tag == "Enemy")
             {
+                _audiosource.PlayOneShot(_ouch);
                 _hp -= _enemyPrefab.Dammage;
                 _invulnerability = 0;
 

@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 686999647794563803}
   m_Layer: 0
   m_Name: Players
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,6 +226,12 @@ MonoBehaviour:
   <Speed>k__BackingField: 0
   <Rigidbody2D>k__BackingField: {fileID: 1804361386111492246}
   <PlayerController>k__BackingField: 0
+  _animatorShooter: {fileID: 0}
+  _animatorSmall: {fileID: 0}
+  _spriteRendererShooter: {fileID: 0}
+  _spriteShooter: {fileID: 0}
+  _spriteRendererSmall: {fileID: 0}
+  _spriteSmall: {fileID: 0}
 --- !u!114 &7697988976975315068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,9 +294,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 1227241306873256240, guid: 790ae3bc647186543b142b6957ccadde, type: 3}
   _gameOverPanel: {fileID: 0}
+  _ooofPrefab: {fileID: 1050442287769902481, guid: 3b32213ff9b53094caf5640d7425dd34, type: 3}
   _text: {fileID: 0}
   _force: 5
   _movement: {fileID: 4026581429781267392}
+  _audiosource: {fileID: 0}
+  _ouch: {fileID: 0}
 --- !u!1001 &3433093099480905774
 PrefabInstance:
   m_ObjectHideFlags: 0
