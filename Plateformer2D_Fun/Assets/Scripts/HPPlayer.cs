@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
+using DG.Tweening;
 
 public class HPPlayer : MonoBehaviour
 {
@@ -9,7 +9,6 @@ public class HPPlayer : MonoBehaviour
     [SerializeField] private TMP_Text _text;
     [SerializeField] private float _force;
     [SerializeField] private Movement _movement;
-
     private float _invulnerability = 0.5f;
     private float _hp = 5;
 
@@ -34,6 +33,9 @@ public class HPPlayer : MonoBehaviour
             {
                 _hp -= _enemyPrefab.Dammage;
                 _invulnerability = 0;
+
+                // Shake the camera when hit.
+                CameraShake.Shake(0.5f, 1f);
 
                 // Calculate Angle Between the collision point and the player
                 ContactPoint2D contactPoint = collision.GetContact(0);
