@@ -14,6 +14,7 @@ public class HPEnemy : MonoBehaviour
         if (_hp <= 0)
         {
             Instantiate(_explosionPrefab, transform.position, transform.rotation);
+            CameraShake.Shake(0.1f, 1f);
             Destroy(gameObject);
         }
     }
